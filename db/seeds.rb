@@ -16,6 +16,7 @@ USERS = [
 ]
 
 USERS.each do |user_data|
+  p 'creating user'
   user = User.create(user_data)
   user.accounts.create(name: "BCP")
   user.accounts.create(name: "Scotianbank")
@@ -25,16 +26,16 @@ USERS.each do |user_data|
 
   user.accounts.each do |account|
     # May
-    account.transactions.create(date: DateTime.new(2020,05,20,8,10,10,"-05:00"),payee:"Tanta",amount: 1000,description: "Codeable's dinner",category:0)
-    account.transactions.create(date: DateTime.new(2020,05,21,8,10,10,"-05:00"),payee:"Complejo La 9",amount: 150,description: "Able's Soccer Day",category:5)
-    account.transactions.create(date: DateTime.new(2020,05,22,8,10,10,"-05:00"),payee:"Coolbox",amount: 200,description: "Headphones",category:1)
+    account.transactions.create(date: DateTime.new(2020,05,20),payee:"Tanta",amount: 1000,description: "Codeable's dinner",category:0)
+    account.transactions.create(date: DateTime.new(2020,05,21),payee:"Complejo La 9",amount: 150,description: "Able's Soccer Day",category:5)
+    account.transactions.create(date: DateTime.new(2020,05,22),payee:"Coolbox",amount: 200,description: "Headphones",category:1)
     # June
-    account.transactions.create(date: DateTime.new(2020,06,20,8,10,10,"-05:00"),payee:"KFC",amount: 1000,description: "Codeable's dinner",category:0)
-    account.transactions.create(date: DateTime.new(2020,06,21,8,10,10,"-05:00"),payee:"Complejo Chino",amount: 150,description: "Able's Soccer Day",category:5)
-    account.transactions.create(date: DateTime.new(2020,06,22,8,10,10,"-05:00"),payee:"Radioshack",amount: 200,description: "Headphones",category:1)
+    account.transactions.create(date: DateTime.new(2020,06,20),payee:"KFC",amount: 1000,description: "Codeable's dinner",category:0)
+    account.transactions.create(date: DateTime.new(2020,06,21),payee:"Complejo Chino",amount: 150,description: "Able's Soccer Day",category:5)
+    account.transactions.create(date: DateTime.new(2020,06,22),payee:"Radioshack",amount: 200,description: "Headphones",category:1)
     # July
-    account.transactions.create(date: DateTime.new(2020,07,20,8,10,10,"-05:00"),payee:"Mc Donalds",amount: 1000,description: "Codeable's dinner",category:0)
-    account.transactions.create(date: DateTime.new(2020,07,21,8,10,10,"-05:00"),payee:"Able",amount: 150,description: "Workshop's",category:2)
-    account.transactions.create(date: DateTime.new(2020,07,22,8,10,10,"-05:00"),payee:"LATAM",amount: 2000,description: "Cohort's travel",category:3)
+    account.transactions.create(date: DateTime.new(2020,07,20),payee:"Mc Donalds",amount: 1000,description: "Codeable's dinner",category:0)
+    account.transactions.create(date: DateTime.new(2020,07,21),payee:"Able",amount: 150,description: "Workshop's",category:2)
+    account.transactions.create(date: DateTime.new(2020,07,22),payee:"LATAM",amount: 2000,description: "Cohort's travel",category:3)
   end
 end
