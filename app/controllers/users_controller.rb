@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      @user.accounts.create(name: "main")
       token = encode_token({user_id: @user.id})
       render json: {user: @user, token: token}
     else

@@ -1,8 +1,14 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :update, :destroy]
-  
+
   def index
-    @transactions = current_user.transactions
+    if (params[:account_id])
+      @account = current_user.accounts.find(params[:account_id])
+      @transactions = @account.transactions
+    else
+      @transactions = current_user.transactions
+    end
+
     render json: @transactions
   end
 
@@ -11,7 +17,12 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @account = current_user.accounts.find_by(id: params[:account_id])
+    if (params[:account_id])
+      @account = current_user.accounts.find_by(id: params[:account_id])
+    else
+      @account = current_user.accounts.first
+    end
+    
     unless @account
       render json: {error: "invalid account_id"}, status: :unprocessable_entity
     else

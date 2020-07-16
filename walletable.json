@@ -1,0 +1,454 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-07-16T09:02:57.130Z",
+  "__export_source": "insomnia.desktop.app:v2020.2.2",
+  "resources": [
+    {
+      "_id": "req_371ae206cda744d4b1c998a948039369",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"BCPv3\",\n\t \t\"initial_balance\": 100\n}"
+      },
+      "created": 1594889369855,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_d2da10486488470baa547c70d090e03c",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_64609347704646c58045a1102ffc9cfe",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594886965509,
+      "method": "POST",
+      "modified": 1594889596153,
+      "name": "Create account",
+      "parameters": [],
+      "parentId": "fld_8dbb2a11494f42e2bd9e89d679ff4c2d",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/accounts",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8dbb2a11494f42e2bd9e89d679ff4c2d",
+      "created": 1594886955921,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594886955921,
+      "modified": 1594886955921,
+      "name": "Accounts",
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "created": 1594874795038,
+      "description": "",
+      "modified": 1594890081662,
+      "name": "Walletable API",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_8df71865bde74d5497e0ccfcd33ab323",
+      "authentication": {},
+      "body": {},
+      "created": 1594886965459,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_f2d48f67a9b4420386fa472186af6792",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594886965459,
+      "method": "GET",
+      "modified": 1594887855516,
+      "name": "List accounts",
+      "parameters": [],
+      "parentId": "fld_8dbb2a11494f42e2bd9e89d679ff4c2d",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/accounts",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c720a8ce907e48d5b27073ff6202604b",
+      "authentication": {},
+      "body": {},
+      "created": 1594887943268,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_f2d48f67a9b4420386fa472186af6792",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594885402694,
+      "method": "GET",
+      "modified": 1594888239170,
+      "name": "List transactions",
+      "parameters": [],
+      "parentId": "fld_8dbb2a11494f42e2bd9e89d679ff4c2d",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/accounts/5/transactions",
+      "_type": "request"
+    },
+    {
+      "_id": "req_56eaef3ad4d24047b6bbc36531c59ecd",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"date\": \"2020-07-16\",\n\t\"category\": \"shopping\",\n\t\"description\": \"Mi descripcion\",\n\t\"amount\": -200,\n\t\"payee\": \"Apple Store\"\n}"
+      },
+      "created": 1594885054417,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_3d26be2ccc774856b3455b3022149a4a",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_b24b578caaba4a5c8b68ad72b21d5457",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594883839929,
+      "method": "POST",
+      "modified": 1594889995983,
+      "name": "Create transaction",
+      "parameters": [],
+      "parentId": "fld_2dba07c8d96f4b7db9c58ab511b6b279",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/transactions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2dba07c8d96f4b7db9c58ab511b6b279",
+      "created": 1594883822073,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594883822073,
+      "modified": 1594883822073,
+      "name": "Transactions",
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_c00172e9c39948bfa76d1fc41f54e4bb",
+      "authentication": {},
+      "body": {},
+      "created": 1594883839879,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_cd06fadf40784950a0860d77dc380f48",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594883839879,
+      "method": "GET",
+      "modified": 1594884762252,
+      "name": "List transactions",
+      "parameters": [],
+      "parentId": "fld_2dba07c8d96f4b7db9c58ab511b6b279",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/transactions",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9e0da11ef4ff4681bd689e1b9041df5e",
+      "authentication": {},
+      "body": {},
+      "created": 1594884773774,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_cd06fadf40784950a0860d77dc380f48",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594879337287.5,
+      "method": "GET",
+      "modified": 1594886737062,
+      "name": "Show transaction",
+      "parameters": [],
+      "parentId": "fld_2dba07c8d96f4b7db9c58ab511b6b279",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/transactions/72",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6af0e92a18484e43bd82748282d451b9",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"amount\": -500,\n\t\"category\": \"income\"\n}"
+      },
+      "created": 1594888320530,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_cd06fadf40784950a0860d77dc380f48",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTQ5NzA2MDB9.i1lihrXKEQbUaRV1mrbwoq2jcyrgfoQSmUfEBsCiNAA"
+        },
+        {
+          "id": "pair_497b8229800f4fbe925888df0cee1514",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594877085991.75,
+      "method": "PATCH",
+      "modified": 1594889309307,
+      "name": "Edit transaction",
+      "parameters": [],
+      "parentId": "fld_2dba07c8d96f4b7db9c58ab511b6b279",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/transactions/1",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ac98f0ede91a4b07a9ab0b64800e7e49",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"test@mail.com\",\n\t\"first_name\": \"test nuevo\",\n\t\"last_name\": \"last name\",\n\t\"phone\": \"123456789\"\n}"
+      },
+      "created": 1594880412419,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_64566982a4b14137947a5ffa5039cbf0",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_f41ab079794b4ca1bbb475b03b0fd821",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozfQ.t0_esRYdzqywBhi9FVzeTOv0Ru32rwyJRkZIGusoxJ8"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594874834696,
+      "method": "PATCH",
+      "modified": 1594881665501,
+      "name": "Edit user",
+      "parameters": [],
+      "parentId": "fld_44ca5376b5ac422ea00af2fe9a3aa639",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/edit_user",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_44ca5376b5ac422ea00af2fe9a3aa639",
+      "created": 1594874812133,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594874812133,
+      "modified": 1594874934537,
+      "name": "Users",
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2eb94e09e1ee492583a32ee48d39657d",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"diego@able.co\",\n\t\"password\": \"diego123\"\n}\n"
+      },
+      "created": 1594874834646,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_34dca0f066c04e8d8ff6af1230b335db",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594874834646,
+      "method": "POST",
+      "modified": 1594886791898,
+      "name": "Login user",
+      "parameters": [],
+      "parentId": "fld_44ca5376b5ac422ea00af2fe9a3aa639",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/login",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eeb659c895f64c75bb55519472c5dfd2",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"test2@mail.com\",\n\t\"password\": \"123456\",\n\t\"first_name\": \"test\",\n\t\"last_name\": \"last\",\n\t\"phone\": \"98765432\"\n}"
+      },
+      "created": 1594875576871,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_abdc07bbed9f4ef5bc549c26a9ecdb4e",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594874834596,
+      "method": "POST",
+      "modified": 1594883925557,
+      "name": "Create user",
+      "parameters": [],
+      "parentId": "fld_44ca5376b5ac422ea00af2fe9a3aa639",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6e5c8000b02e4d088de93fd2a08a7107",
+      "authentication": {},
+      "body": {},
+      "created": 1594879133218,
+      "description": "",
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_ecbcf6fd373049b7b09dd00a0ca3e2bc",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1OTQ4ODczNjN9.4StlARKUZ0KEAOSzJOdNgDSbmNJrbaWzlYMhlz3TR0E"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1594874834546,
+      "method": "GET",
+      "modified": 1594886784030,
+      "name": "Show user",
+      "parameters": [],
+      "parentId": "fld_44ca5376b5ac422ea00af2fe9a3aa639",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/user",
+      "_type": "request"
+    },
+    {
+      "_id": "env_24ac668b7c3af974dce5f38f70c26e0b9c8194f6",
+      "color": null,
+      "created": 1594874795315,
+      "data": {},
+      "dataPropertyOrder": null,
+      "isPrivate": false,
+      "metaSortKey": 1594874795315,
+      "modified": 1594874795315,
+      "name": "Base Environment",
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_24ac668b7c3af974dce5f38f70c26e0b9c8194f6",
+      "cookies": [],
+      "created": 1594874795319,
+      "modified": 1594874795319,
+      "name": "Default Jar",
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_dff3093f7e684a7b9eaedfa7618e6847",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1594874795056,
+      "fileName": "Walletable",
+      "modified": 1594874795056,
+      "parentId": "wrk_f2c2936e2bac403da311d1236bf118c8",
+      "_type": "api_spec"
+    }
+  ]
+}

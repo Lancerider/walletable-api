@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   patch "/edit_user", to: "users#update"
   post "/logout", to: "users#logout"
   resources :users, only: [:create]
-  resources :accounts
+  resources :accounts do
+    resources :transactions, only: [:index]
+  end
   resources :transactions
 end
 
