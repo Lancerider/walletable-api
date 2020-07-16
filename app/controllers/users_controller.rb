@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorized, only: [:auto_login]
 
-  # REGISTER
+  # Sign Up
   def create
     @user = User.create(user_params)
     if @user.valid?
@@ -12,9 +12,9 @@ class UsersController < ApplicationController
     end
   end
 
-  # LOGGING IN
+  # Logging in
   def login
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(email: params[:email])
 
     if @user && @user.authenticate(params[:password])
       token = encode_token({user_id: @user.id})
@@ -24,15 +24,12 @@ class UsersController < ApplicationController
     end
   end
 
-
   def auto_login
     render json: @user
   end
 
   private
-
   def user_params
-    params.permit(:username, :password, :age)
+    params.permit(:email, :password, :first_name, :last_name, :phone)
   end
-
 end

@@ -4,4 +4,5 @@ class Account < ApplicationRecord
 
   #Validation
   validates :name, presence: true
+  # Incluir saldo inicial -> 0! 
 end
