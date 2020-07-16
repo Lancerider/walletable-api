@@ -1,4 +1,5 @@
 class AccountsController < ApplicationController
+
   before_action :set_account, only: [:show, :update, :destroy]
 
   def index
@@ -16,16 +17,15 @@ class AccountsController < ApplicationController
     if @account.save
       render json: @account, status: :created, location: @account
     else
-      render json: @account.errors, status: :unprocessable_entity
+      render json: { error: @account.errors.full_messages.join(",") }, status: :unprocessable_entity
     end
   end
 
   def update
     if @account.update(account_params)
-      render json: @account # Serializer pending !
+      render json: @account
     else
-      render json: @account.errors, status: :unprocessable_entity
-      # TO-DO: Personalizar los mensajes de error 👀 (account.errors.full_messages)
+      render json: {error: @account.errors.full_messages.join(",")}, status: :unprocessable_entity
     end
   end
 
@@ -39,7 +39,6 @@ class AccountsController < ApplicationController
     end
 
     def account_params
-      params.fetch(:account, {}).permit(:name)
-      # TODO: Agregar saldo inicial
+      params.fetch(:account, {}).permit(:name, :initial_balance)
     end
 end
